@@ -76,16 +76,34 @@ public class Main {
 //        value = menu(sc);
 //
         // VECTORS -------------------------------------------------------------------------------//
+//        System.out.println("Type the array size below:");
+//        int n = sc.nextInt();
+//        double[] vect = new double[n];
+//
+//        for(int i=0; i < vect.length; i++){
+//            vect[i] = sc.nextDouble();
+//        }
+//
+//        for (double v : vect) {
+//            System.out.println(v);
+//        }
+
+        //VECTOR WITH CLASSES------------------------------------------------------------------//
         System.out.println("Type the array size below:");
         int n = sc.nextInt();
-        double[] vect = new double[n];
+        Product[] vect = new Product[n];
 
-        for(int i=0; i < vect.length; i++){
-            vect[i] = sc.nextDouble();
+        for(int i=0;i < n; i++){
+            sc.nextLine();
+            String name = sc.nextLine();
+            double price = sc.nextDouble();
+            int quantity = sc.nextInt();
+
+            vect[i] = new Product(name, price, quantity);
         }
 
-        for (double v : vect) {
-            System.out.println(v);
+        for(Product p : vect){
+            System.out.println(p.toString());
         }
 
         sc.close();
