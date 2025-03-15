@@ -45,44 +45,57 @@ public class Main {
 
 // OOP 2 -----------------------------------------------------------------------
 
-        Product product = new Product();
+//        Product product = new Product();
+//
+//        System.out.println("Enter product data");
+//        System.out.print("Name: ");
+//        product.name = sc.nextLine();
+//
+//        System.out.print("Price: ");
+//        product.price = sc.nextDouble();
+//
+//        System.out.print("Quantity: ");
+//        product.quantity = sc.nextInt();
+//
+//        System.out.println(product.toString());
+//
+//        int value = menu(sc);
+//
+//        if(value == 1){
+//            product.addProducts(1);
+//            System.out.println(product.toString());
+//        }
+//        else if(value == 2){
+//            product.removeProducts(1);
+//            System.out.println(product.toString());
+//        }
+//        else{
+//            System.out.println("Select a number between 1 and 2!");
+//        }
+//
+//        value = menu(sc);
+//
+        // VECTORS -------------------------------------------------------------------------------//
+        System.out.println("Type the array size below:");
+        int n = sc.nextInt();
+        double[] vect = new double[n];
 
-        System.out.println("Enter product data");
-        System.out.print("Name: ");
-        product.name = sc.nextLine();
-
-        System.out.print("Price: ");
-        product.price = sc.nextDouble();
-
-        System.out.print("Quantity: ");
-        product.quantity = sc.nextInt();
-
-        System.out.println(product.toString());
-
-        int value = menu(sc);
-
-        if(value == 1){
-            product.addProducts(1);
-            System.out.println(product.toString());
+        for(int i=0; i < vect.length; i++){
+            vect[i] = sc.nextDouble();
         }
-        else if(value == 2){
-            product.removeProducts(1);
-            System.out.println(product.toString());
-        }
-        else{
-            System.out.println("Select a number between 1 and 2!");
-        }
 
-        value = menu(sc);
+        for (double v : vect) {
+            System.out.println(v);
+        }
 
         sc.close();
     }
 
-    public static int menu(Scanner sc){
+    public static int menu(Scanner sc) {
         System.out.println("Select an option:\n1 - ADD\n2 - SUBTRACT\n");
         int value = sc.nextInt();
 
-        if(value > 2 || value < 1){
+        if (value > 2 || value < 1) {
             return 0;
         }
 
