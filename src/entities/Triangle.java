@@ -1,4 +1,4 @@
-package oop;
+package entities;
 
 public class Triangle {
     public double a;
